@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA DIGITAL STORE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+ background:#080812;
+ color:white;
+ font-family:Arial,sans-serif;
+}
+header{
+ padding:22px 7%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ border-bottom:1px solid #29213c;
+}
+.logo{font-size:25px;font-weight:bold;color:#a879ff}
+.logo span{color:#00e5ff}
+nav a{color:#ddd;text-decoration:none;margin-left:20px}
+.hero{
+ text-align:center;
+ padding:100px 20px 80px;
+ background:radial-gradient(ellipse at top,#302052,#080812 70%);
+}
+.hero h1{font-size:45px;margin-bottom:18px}
+.hero h1 span{color:#a879ff}
+.hero p{color:#b9b6c9;font-size:17px;line-height:1.7}
+.btn{
+ display:inline-block;
+ margin-top:25px;
+ padding:14px 28px;
+ border-radius:9px;
+ background:linear-gradient(90deg,#8b45ff,#00c9e8);
+ color:white;
+ text-decoration:none;
+ font-weight:bold;
+}
+section{padding:55px 7%}
+.heading{text-align:center;font-size:30px;margin-bottom:35px}
+.heading span{color:#a879ff}
+.products{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:22px;
+}
+.card{
+ background:#141322;
+ border:1px solid #302447;
+ padding:25px;
+ border-radius:15px;
+ text-align:center;
+}
+.preview{
+ height:145px;
+ border-radius:10px;
+ background:linear-gradient(135deg,#38205e,#111a32);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:40px;
+ margin-bottom:20px;
+}
+.card h3{margin-bottom:12px}
+.card p{color:#aaa;line-height:1.6}
+.price{color:#00e5ff;font-size:23px;margin:18px}
+.card a{
+ display:block;
+ background:#8246ef;
+ padding:12px;
+ border-radius:8px;
+ color:white;
+ text-decoration:none;
+}
+.about{
+ text-align:center;
+ background:#11101e;
+ border-top:1px solid #29213c;
+ border-bottom:1px solid #29213c;
+}
+.about p{color:#bbb;line-height:1.8;max-width:650px;margin:auto}
+footer{text-align:center;padding:28px;color:#888}
+@media(max-width:600px){
+ .hero h1{font-size:34px}
+ nav a{margin-left:8px;font-size:12px}
+ header{padding:18px 4%}
+ section{padding:40px 5%}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">NOVA<span>.</span></div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#products">Store</a>
+  <a href="#about">About</a>
+ </nav>
+</header>
+
+<div class="hero" id="home">
+ <h1>Welcome to <span>NOVA</span></h1>
+ <p>Your Digital World Starts Here.<br>
+ Premium Digital Products at Affordable Prices.</p>
+ <a href="#products" class="btn">Explore Store →</a>
+</div>
+
+<section id="products">
+ <h2 class="heading">Our <span>Products</span></h2>
+ <div class="products">
+
+  <div class="card">
+   <div class="preview">📄</div>
+   <h3>Professional Resume</h3>
+   <p>Modern professional resume templates for job seekers.</p>
+   <div class="price">₹49</div>
+   <a href="#contact">Coming Soon</a>
+  </div>
+
+  <div class="card">
+   <div class="preview">💼</div>
+   <h3>Creative Resume</h3>
+   <p>Creative resume designs for modern careers.</p>
+   <div class="price">₹49</div>
+   <a href="#contact">Coming Soon</a>
+  </div>
+
+  <div class="card">
+   <div class="preview">⭐</div>
+   <h3>Premium Resume Bundle</h3>
+   <p>A collection of stylish resume templates.</p>
+   <div class="price">₹99</div>
+   <a href="#contact">Coming Soon</a>
+  </div>
+
+ </div>
+</section>
+
+<section class="about" id="about">
+ <h2 class="heading">About <span>NOVA</span></h2>
+ <p>NOVA DIGITAL STORE is your destination
+ for useful and affordable digital products.
+ We aim to make digital resources accessible
+ to everyone.</p>
+</section>
+
+<section id="contact" style="text-align:center">
+ <h2 class="heading">Coming <span>Soon</span></h2>
+ <p style="color:#aaa">Our digital store is getting ready!</p>
+</section>
+
+<footer>
+ © 2026 NOVA DIGITAL STORE. All Rights Reserved.
+</footer>
+
+</body>
+</html>
