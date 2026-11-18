@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shubhamsingh33612-sys.github.io/Nova_Digital_Store/sitemap.xml
