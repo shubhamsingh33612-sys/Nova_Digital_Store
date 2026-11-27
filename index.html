@@ -283,6 +283,64 @@ h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--roy
  .nebula-features{grid-template-columns:1fr}
 }
 
+
+/* ---------- NOVA NEBULA Icon Gallery ---------- */
+.nebula-gallery-section{
+ padding:64px 0;
+ background:linear-gradient(180deg,#080f20,#0b1428);
+ color:#eaf2ff;
+}
+.nebula-gallery-heading{text-align:center;margin-bottom:30px}
+.nebula-gallery-heading h2{color:#fff;margin:10px 0}
+.nebula-gallery-heading p{color:#aabbd5}
+.nebula-gallery-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(105px,1fr));
+ gap:14px;
+}
+.nebula-icon-card{
+ min-width:0;padding:12px 8px;
+ border:1px solid rgba(130,190,255,.18);
+ border-radius:16px;background:rgba(255,255,255,.045);
+ color:#eaf2ff;cursor:pointer;
+ font:inherit;text-align:center;
+ transition:transform .2s,border-color .2s,background .2s;
+}
+.nebula-icon-card:hover,.nebula-icon-card:focus-visible{
+ transform:translateY(-3px);
+ border-color:#75ddff;background:rgba(117,221,255,.09);
+ outline:none;
+}
+.nebula-icon-card img{
+ display:block;width:100%;max-width:88px;
+ aspect-ratio:1;margin:0 auto 9px;
+ object-fit:contain;border-radius:14px;
+}
+.nebula-icon-card span{
+ display:block;font-size:12px;overflow-wrap:anywhere;
+}
+#nebula-icon-dialog{
+ width:min(90vw,380px);padding:24px;
+ border:1px solid rgba(117,221,255,.4);
+ border-radius:22px;background:#0b1428;color:#fff;
+ text-align:center;
+}
+#nebula-icon-dialog::backdrop{background:rgba(0,0,0,.78)}
+#nebula-icon-dialog img{
+ display:block;width:min(65vw,240px);
+ aspect-ratio:1;object-fit:contain;margin:12px auto;
+}
+#nebula-icon-dialog h3{margin:8px 0 18px}
+#nebula-icon-dialog button{
+ padding:10px 22px;border:1px solid #75ddff;
+ border-radius:999px;background:#14294a;color:#fff;
+ cursor:pointer;font:inherit;
+}
+@media(max-width:420px){
+ .nebula-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+ .nebula-icon-card{padding:9px 5px}
+}
+
 /* ---------- About ---------- */
 .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
 .about-text{font-size:clamp(19px,2vw,24px);line-height:1.6;color:var(--navy-2);font-weight:500}
@@ -541,6 +599,75 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
  </div>
 </section>
 
+
+<section class="nebula-gallery-section" id="nebula-gallery" aria-labelledby="nebula-gallery-title">
+ <div class="wrap">
+  <div class="nebula-gallery-heading">
+   <span class="kicker">Explore the collection</span>
+   <h2 id="nebula-gallery-title">50 Custom <em>NOVA NEBULA</em> Icons</h2>
+   <p>Tap any icon to view its larger preview.</p>
+  </div>
+  <div class="nebula-gallery-grid">
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/battery.png" data-icon-name="Battery" aria-label="Preview Battery"><img src="assets/nebula/battery.png" alt="Battery icon" loading="lazy"><span>Battery</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/calculator.png" data-icon-name="Calculator" aria-label="Preview Calculator"><img src="assets/nebula/calculator.png" alt="Calculator icon" loading="lazy"><span>Calculator</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/calendar.png" data-icon-name="Calendar" aria-label="Preview Calendar"><img src="assets/nebula/calendar.png" alt="Calendar icon" loading="lazy"><span>Calendar</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/camera.png" data-icon-name="Camera" aria-label="Preview Camera"><img src="assets/nebula/camera.png" alt="Camera icon" loading="lazy"><span>Camera</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/chrome.png" data-icon-name="Chrome" aria-label="Preview Chrome"><img src="assets/nebula/chrome.png" alt="Chrome icon" loading="lazy"><span>Chrome</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/clock.png" data-icon-name="Clock" aria-label="Preview Clock"><img src="assets/nebula/clock.png" alt="Clock icon" loading="lazy"><span>Clock</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/contacts.png" data-icon-name="Contacts" aria-label="Preview Contacts"><img src="assets/nebula/contacts.png" alt="Contacts icon" loading="lazy"><span>Contacts</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/discord.png" data-icon-name="Discord" aria-label="Preview Discord"><img src="assets/nebula/discord.png" alt="Discord icon" loading="lazy"><span>Discord</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/documents.png" data-icon-name="Documents" aria-label="Preview Documents"><img src="assets/nebula/documents.png" alt="Documents icon" loading="lazy"><span>Documents</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/downloads.png" data-icon-name="Downloads" aria-label="Preview Downloads"><img src="assets/nebula/downloads.png" alt="Downloads icon" loading="lazy"><span>Downloads</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/facebook.png" data-icon-name="Facebook" aria-label="Preview Facebook"><img src="assets/nebula/facebook.png" alt="Facebook icon" loading="lazy"><span>Facebook</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/files.png" data-icon-name="Files" aria-label="Preview Files"><img src="assets/nebula/files.png" alt="Files icon" loading="lazy"><span>Files</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/gallery.png" data-icon-name="Gallery" aria-label="Preview Gallery"><img src="assets/nebula/gallery.png" alt="Gallery icon" loading="lazy"><span>Gallery</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/gmail.png" data-icon-name="Gmail" aria-label="Preview Gmail"><img src="assets/nebula/gmail.png" alt="Gmail icon" loading="lazy"><span>Gmail</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/google.png" data-icon-name="Google" aria-label="Preview Google"><img src="assets/nebula/google.png" alt="Google icon" loading="lazy"><span>Google</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/google_drive.png" data-icon-name="Google Drive" aria-label="Preview Google Drive"><img src="assets/nebula/google_drive.png" alt="Google Drive icon" loading="lazy"><span>Google Drive</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/google_keep.png" data-icon-name="Google Keep" aria-label="Preview Google Keep"><img src="assets/nebula/google_keep.png" alt="Google Keep icon" loading="lazy"><span>Google Keep</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/google_meet.png" data-icon-name="Google Meet" aria-label="Preview Google Meet"><img src="assets/nebula/google_meet.png" alt="Google Meet icon" loading="lazy"><span>Google Meet</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/google_photos.png" data-icon-name="Google Photos" aria-label="Preview Google Photos"><img src="assets/nebula/google_photos.png" alt="Google Photos icon" loading="lazy"><span>Google Photos</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/instagram.png" data-icon-name="Instagram" aria-label="Preview Instagram"><img src="assets/nebula/instagram.png" alt="Instagram icon" loading="lazy"><span>Instagram</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/linkedin.png" data-icon-name="Linkedin" aria-label="Preview Linkedin"><img src="assets/nebula/linkedin.png" alt="Linkedin icon" loading="lazy"><span>Linkedin</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/maps.png" data-icon-name="Maps" aria-label="Preview Maps"><img src="assets/nebula/maps.png" alt="Maps icon" loading="lazy"><span>Maps</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/messages.png" data-icon-name="Messages" aria-label="Preview Messages"><img src="assets/nebula/messages.png" alt="Messages icon" loading="lazy"><span>Messages</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/microphone.png" data-icon-name="Microphone" aria-label="Preview Microphone"><img src="assets/nebula/microphone.png" alt="Microphone icon" loading="lazy"><span>Microphone</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/microsoft_teams.png" data-icon-name="Microsoft Teams" aria-label="Preview Microsoft Teams"><img src="assets/nebula/microsoft_teams.png" alt="Microsoft Teams icon" loading="lazy"><span>Microsoft Teams</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/music.png" data-icon-name="Music" aria-label="Preview Music"><img src="assets/nebula/music.png" alt="Music icon" loading="lazy"><span>Music</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/netflix.png" data-icon-name="Netflix" aria-label="Preview Netflix"><img src="assets/nebula/netflix.png" alt="Netflix icon" loading="lazy"><span>Netflix</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/news.png" data-icon-name="News" aria-label="Preview News"><img src="assets/nebula/news.png" alt="News icon" loading="lazy"><span>News</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/nova_launcher.png" data-icon-name="Nova Launcher" aria-label="Preview Nova Launcher"><img src="assets/nebula/nova_launcher.png" alt="Nova Launcher icon" loading="lazy"><span>Nova Launcher</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/phone.png" data-icon-name="Phone" aria-label="Preview Phone"><img src="assets/nebula/phone.png" alt="Phone icon" loading="lazy"><span>Phone</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/play_games.png" data-icon-name="Play Games" aria-label="Preview Play Games"><img src="assets/nebula/play_games.png" alt="Play Games icon" loading="lazy"><span>Play Games</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/play_store.png" data-icon-name="Play Store" aria-label="Preview Play Store"><img src="assets/nebula/play_store.png" alt="Play Store icon" loading="lazy"><span>Play Store</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/qr_scanner.png" data-icon-name="Qr Scanner" aria-label="Preview Qr Scanner"><img src="assets/nebula/qr_scanner.png" alt="Qr Scanner icon" loading="lazy"><span>Qr Scanner</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/reddit.png" data-icon-name="Reddit" aria-label="Preview Reddit"><img src="assets/nebula/reddit.png" alt="Reddit icon" loading="lazy"><span>Reddit</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/security.png" data-icon-name="Security" aria-label="Preview Security"><img src="assets/nebula/security.png" alt="Security icon" loading="lazy"><span>Security</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/settings.png" data-icon-name="Settings" aria-label="Preview Settings"><img src="assets/nebula/settings.png" alt="Settings icon" loading="lazy"><span>Settings</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/shopping.png" data-icon-name="Shopping" aria-label="Preview Shopping"><img src="assets/nebula/shopping.png" alt="Shopping icon" loading="lazy"><span>Shopping</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/snapchat.png" data-icon-name="Snapchat" aria-label="Preview Snapchat"><img src="assets/nebula/snapchat.png" alt="Snapchat icon" loading="lazy"><span>Snapchat</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/spotify.png" data-icon-name="Spotify" aria-label="Preview Spotify"><img src="assets/nebula/spotify.png" alt="Spotify icon" loading="lazy"><span>Spotify</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/telegram.png" data-icon-name="Telegram" aria-label="Preview Telegram"><img src="assets/nebula/telegram.png" alt="Telegram icon" loading="lazy"><span>Telegram</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/translate.png" data-icon-name="Translate" aria-label="Preview Translate"><img src="assets/nebula/translate.png" alt="Translate icon" loading="lazy"><span>Translate</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/video.png" data-icon-name="Video" aria-label="Preview Video"><img src="assets/nebula/video.png" alt="Video icon" loading="lazy"><span>Video</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/wallet.png" data-icon-name="Wallet" aria-label="Preview Wallet"><img src="assets/nebula/wallet.png" alt="Wallet icon" loading="lazy"><span>Wallet</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/weather.png" data-icon-name="Weather" aria-label="Preview Weather"><img src="assets/nebula/weather.png" alt="Weather icon" loading="lazy"><span>Weather</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/whatsapp.png" data-icon-name="Whatsapp" aria-label="Preview Whatsapp"><img src="assets/nebula/whatsapp.png" alt="Whatsapp icon" loading="lazy"><span>Whatsapp</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/x.png" data-icon-name="X" aria-label="Preview X"><img src="assets/nebula/x.png" alt="X icon" loading="lazy"><span>X</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/youtube.png" data-icon-name="Youtube" aria-label="Preview Youtube"><img src="assets/nebula/youtube.png" alt="Youtube icon" loading="lazy"><span>Youtube</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/youtube_music.png" data-icon-name="Youtube Music" aria-label="Preview Youtube Music"><img src="assets/nebula/youtube_music.png" alt="Youtube Music icon" loading="lazy"><span>Youtube Music</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/youtube_studio.png" data-icon-name="Youtube Studio" aria-label="Preview Youtube Studio"><img src="assets/nebula/youtube_studio.png" alt="Youtube Studio icon" loading="lazy"><span>Youtube Studio</span></button>
+<button class="nebula-icon-card" type="button" data-icon-src="assets/nebula/zoom.png" data-icon-name="Zoom" aria-label="Preview Zoom"><img src="assets/nebula/zoom.png" alt="Zoom icon" loading="lazy"><span>Zoom</span></button>
+  </div>
+ </div>
+</section>
+
+<dialog id="nebula-icon-dialog" aria-label="Icon preview">
+ <img id="nebula-preview-image" src="" alt="">
+ <h3 id="nebula-preview-name"></h3>
+ <button type="button" id="nebula-preview-close">Close Preview</button>
+</dialog>
+
 <section class="about" id="about" aria-labelledby="about-title">
  <div class="wrap about-grid">
   <div>
@@ -583,6 +710,35 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
   </nav>
  </div>
 </footer>
+
+
+<script>
+(() => {
+ const dialog = document.getElementById('nebula-icon-dialog');
+ const preview = document.getElementById('nebula-preview-image');
+ const title = document.getElementById('nebula-preview-name');
+ const close = document.getElementById('nebula-preview-close');
+
+ if (!dialog || !preview || !title || !close) return;
+
+ document.querySelectorAll('.nebula-icon-card').forEach(card => {
+  card.addEventListener('click', () => {
+   preview.src = card.dataset.iconSrc;
+   preview.alt = card.dataset.iconName + ' icon preview';
+   title.textContent = card.dataset.iconName;
+   dialog.showModal();
+  });
+ });
+
+ close.addEventListener('click', () => dialog.close());
+ dialog.addEventListener('click', event => {
+  if (event.target === dialog) dialog.close();
+ });
+ dialog.addEventListener('close', () => {
+  preview.removeAttribute('src');
+ });
+})();
+</script>
 
 </body>
 </html>
